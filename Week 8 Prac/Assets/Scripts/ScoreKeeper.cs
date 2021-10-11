@@ -7,22 +7,25 @@ public class ScoreKeeper : MonoBehaviour
     public int pickupPoints = 2;
 
     [HideInInspector]
-    public int currentScore;
+    public int playerOneScore;
+    public int playerTwoScore;
     // Start is called before the first frame update
     void Start()
     {
-        currentScore = 0;
+        playerOneScore = 0;
+        playerTwoScore = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void pickupCoin(string tag)
     {
-
-    }
-
-    public void pickupCoin()
-    {
-        currentScore += pickupPoints;
+        if(tag == "Player")
+        {
+            playerOneScore += pickupPoints;
+        }
+        if (tag == "Player2")
+        {
+            playerTwoScore += pickupPoints;
+        }
     }
 
 }

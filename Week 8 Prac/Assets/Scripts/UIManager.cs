@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public ScoreKeeper scoreScript;
-    public Text scoreObject;
+    public Text playerOneScore;
+    public Text playerTwoScore;
 
     // Update is called once per frame
     void Update()
     {
-        scoreObject.text = "Current Score: " + scoreScript.currentScore;
+        playerOneScore.text = "Player 1 Score: " + scoreScript.playerOneScore;
+        playerTwoScore.text = "Player 2 Score: " + scoreScript.playerTwoScore;
     }
 }

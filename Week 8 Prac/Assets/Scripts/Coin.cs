@@ -17,7 +17,12 @@ public class Coin : MonoBehaviour
         // if collision with player
         if(other.CompareTag("Player"))
         {
-            scoreKeeper.pickupCoin();
+            scoreKeeper.pickupCoin(other.tag);
+            Destroy(this.gameObject);
+        }
+        if(other.CompareTag("Player2"))
+        {
+            scoreKeeper.pickupCoin(other.tag);
             Destroy(this.gameObject);
         }
     }
